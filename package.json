@@ -1,0 +1,31 @@
+{
+  "name": "mvctemplate",
+  "version": "1.0.0",
+  "description": "A simple Template for Nodejs MVC Applications.",
+  "main": "server.js",
+  "scripts": {
+    "start": "set DEBUG=APP:* && nodemon src/bin/www",
+    "lint": "eslint --fix ./"
+  },
+  "author": "Daniel VG",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.2",
+    "debug": "^3.1.0",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^5.0.12",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.17.2",
+    "reload": "^2.2.2"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "mocha": "^5.1.0"
+  }
+}
