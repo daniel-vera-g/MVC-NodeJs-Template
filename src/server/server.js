@@ -4,7 +4,7 @@ const app = express();
 const path = require('path');
 const morgan = require('morgan');
 // morgan logging utility
-app.use(morgan('combined'));
+app.use(morgan('tiny'));
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv').config({ path: '../../config/.env' });
@@ -15,7 +15,7 @@ const exphbs = require('express-handlebars');
 debug('Setting up Config');
 
 // server static files
-app.use(express.static(path.join(__dirname, '../client/public/')));
+app.use(express.static(path.join(__dirname, '../client/public')));
 
 // view engine
 const viewsPath = path.join(__dirname, '../client/', 'views');
