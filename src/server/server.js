@@ -13,10 +13,9 @@ const reload = require('reload');
 const exphbs = require('express-handlebars');
 
 debug('Setting up Config');
-console.log(path.join(__dirname, "/../client/public"));
+
 // server static files
 app.use(express.static(path.join(__dirname, '/../client/public')));
-// fs.readFile(__dirname + "/../../foo.bar");
 
 // view engine
 const viewsPath = path.join(__dirname, '../client/', 'views');
