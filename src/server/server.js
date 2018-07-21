@@ -4,7 +4,8 @@ const app = express();
 const path = require("path");
 const morgan = require("morgan");
 // morgan logging utility
-app.use(morgan("tiny"));
+// app.use(morgan("tiny"));
+app.use(morgan("combined", { stream: winston.stream }));
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv").config({ path: "../../config/.env" });
@@ -29,7 +30,6 @@ app.engine(
 	}),
 );
 app.set("view engine", "handlebars");
-
 
 // body parser
 app.use(bodyParser.json({ limit: "50mb" }));
