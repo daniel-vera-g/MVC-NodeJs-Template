@@ -2,10 +2,11 @@ const express = require("express");
 
 const app = express();
 const path = require("path");
-const morgan = require("morgan");
+const logger = require("morgan");
 // morgan logging utility
 // app.use(morgan("tiny"));
 app.use(morgan("combined", { stream: winston.stream }));
+const createError = require("http-errors");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv").config({ path: "../../config/.env" });
@@ -43,9 +44,9 @@ app.use(bodyParser.urlencoded({ limit: "50mb", extended: false }));
 // })
 
 // router
-const router = require("./routes/routes.js");
+const indexRouter = require("./routes/routes.js");
 
-app.use("/", router);
+app.use("/", indexRouter);
 
 // error handler
 app.use((err, req, res, next) => {
@@ -60,7 +61,6 @@ app.use((err, req, res, next) => {
 	res.status(err.status || 500);
 	res.render("error");
 });
-
 
 reload(app);
 
