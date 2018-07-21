@@ -12,7 +12,7 @@ const model = require("../../models/model");
 // Basic route Handler
 router.get("/", (req, res) => {
 	debug("Rendering index.hbs");
-	res.status(200).render("home");
+	res.status(200).render("home", { title: "MVC Template" });
 });
 
 /* CRUD Operations */
