@@ -6,11 +6,11 @@
  * @desc Configuration for the Winston logger
 */
 
-let appRoot = require("app-root-path");
-let winston = require("winston");
+const appRoot = require("app-root-path");
+const winston = require("winston");
 
 // define the custom settings for each transport (file, console)
-let options = {
+const options = {
 	file: {
 		level: "info",
 		filename: `${appRoot}/logs/app.log`,
@@ -29,7 +29,7 @@ let options = {
 };
 
 // instantiate a new Winston Logger with the settings defined above
-let logger = new winston.Logger({
+const logger = new winston.Logger({
 	transports: [
 		new winston.transports.File(options.file),
 		new winston.transports.Console(options.console),
