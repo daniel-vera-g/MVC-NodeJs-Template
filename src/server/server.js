@@ -9,7 +9,7 @@ const dotenv = require("dotenv").config({ path: "../../config/.env" });
 const debug = require("debug")("APP:server");
 const reload = require("reload");
 const exphbs = require("express-handlebars");
-const winston = require("./config/winston");
+const winston = require("../../config/winston");
 
 const indexRouter = require("./routes/routes.js");
 
@@ -31,7 +31,7 @@ app.engine(
 app.set("view engine", "handlebars");
 
 // morgan logging utility
-app.use(morgan("combined", { stream: winston.stream }));
+app.use(morgan("tiny", { stream: winston.stream }));
 app.use(express.json());
 
 // server static files
