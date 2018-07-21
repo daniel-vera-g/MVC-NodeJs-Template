@@ -56,8 +56,6 @@ app.use((err, req, res, next) => {
 	res.render("error");
 });
 
-reload(app);
-
 module.exports = app;
 // TODO mongoose custom configuration
 // mongoose.connect(process.env.DB_CONN).then(() => {
