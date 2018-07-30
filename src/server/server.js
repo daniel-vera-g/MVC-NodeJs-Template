@@ -6,17 +6,16 @@ const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv").config({ path: "../../config/.env" });
-const debug = require("debug")("APP:server");
-const reload = require("reload");
+const debug = require("debug")("server");
 const exphbs = require("express-handlebars");
 const winston = require("../../config/winston");
 
 const indexRouter = require("./routes/routes.js");
 
 debug("Setting up Config");
+winston.info("Starting server");
 
 const app = express();
-
 
 // view engine
 const viewsPath = path.join(__dirname, "../client/", "views");

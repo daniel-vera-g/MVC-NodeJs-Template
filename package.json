@@ -4,7 +4,7 @@
   "description": "A simple Template for Nodejs MVC Applications.",
   "main": "server.js",
   "scripts": {
-    "start": "set DEBUG=APP:* && nodemon ./src/bin/www",
+    "testStart": "DEBUG=APP:* nodemon ./src/bin/www", 
     "lint": "eslint --fix ./"
   },
   "author": "Daniel VG",

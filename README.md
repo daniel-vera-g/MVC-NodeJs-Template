@@ -18,3 +18,7 @@
 
 * [Mongoose](http://mongoosejs.com/) A NoSQL Database system.
 * [MongoDB](https://www.mongodb.com/) - Non relational Database.
+
+## Note
+
+* In Windows OS use `"start": "set DEBUG=APP:* && nodemon ./src/bin/www",`in the packages.json

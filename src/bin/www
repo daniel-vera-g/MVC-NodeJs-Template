@@ -5,8 +5,10 @@
  */
 
 var app = require('../server/server.js');
-var debug = require('debug')('test:server');
+var debug = require('debug')('APP:startUp');
 var http = require('http');
+
+debug("Starting server");
 
 /**
  * Get port from environment and store in Express.
