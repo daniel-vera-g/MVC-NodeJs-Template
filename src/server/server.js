@@ -13,7 +13,6 @@ const winston = require("../../config/winston");
 const indexRouter = require("./routes/routes.js");
 
 debug("Setting up Config");
-winston.info("Starting server");
 
 const app = express();
 
