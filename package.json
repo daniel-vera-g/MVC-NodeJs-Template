@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "testStart": "DEBUG=APP:* nodemon ./src/bin/www", 
-    "lint": "eslint --fix ./"
+    "lint": "eslint --fix ./",
+    "test": "mocha"
   },
   "author": "Daniel VG",
   "license": "ISC",
