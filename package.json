@@ -6,7 +6,7 @@
   "scripts": {
     "testStart": "DEBUG=APP:* nodemon ./src/bin/www", 
     "lint": "eslint --fix ./",
-    "test": "mocha"
+    "test": "mocha --exit --timeout 15000"
   },
   "author": "Daniel VG",
   "license": "ISC",
