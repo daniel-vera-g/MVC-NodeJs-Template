@@ -4,7 +4,7 @@
   "description": "A simple Template for Nodejs MVC Applications.",
   "main": "server.js",
   "scripts": {
-    "testStart": "DEBUG=APP:* nodemon ./src/bin/www", 
+    "testStart": "DEBUG=APP:* nodemon ./src/bin/www",
     "lint": "eslint --fix ./",
     "test": "mocha --exit --timeout 15000"
   },
@@ -16,6 +16,7 @@
     "body-parser": "^1.18.2",
     "cookie-parser": "^1.4.3",
     "debug": "^3.1.0",
+    "deep-extend": "^0.5.1",
     "dotenv": "^5.0.1",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
